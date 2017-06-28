@@ -2,6 +2,8 @@
 
 > The handy little cli utility for finding lost files.
 
+![[Example Output](output.png)](output.png)
+
 - Finds files reursively
 - Ignores `node_modules` and `.git` directories
 - Lists files in reverse modified order (newest at bottom)
@@ -22,4 +24,3 @@ Find all Markdown files recursively, that are not named `README.md`
 ```
 findy "**/*.md" "!**/README.md"
 ```
-
