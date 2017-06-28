@@ -140,8 +140,8 @@ const recursiveRead = dir => new Promise((resolve, reject) => {
 	})
 })
 
-const main = () => {
-	recursiveRead('.').then(results => {
+const main = dir => {
+	recursiveRead(dir).then(results => {
 		results.sortByProp('mtime')
 
 		results.forEach(file => {
@@ -154,4 +154,8 @@ const main = () => {
 	})
 }
 
-main()
+if (module.parent) {
+	module.exports = main
+} else {
+	main('.')
+}

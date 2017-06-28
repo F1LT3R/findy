@@ -1,6 +1,10 @@
 # Findy!
 
-> The handy little cli utility for finding lost files.
+Findy is the handy little cli utility for finding lost files by name.
+
+_To find lost files by contents, use [ack](https://beyondgrep.com/)_
+
+### Output
 
 ![[Example Output](output.png)](output.png)
 
@@ -26,15 +30,15 @@ yarn install findy -g
 Find all Markdown files recursively, that are **not** named `README.md`
 
 ```shell
-findy "**/*.md" "!**/README.md"
+findy '**/*.md' '!**/README.md'
 ```
 
 ### File permissions
 
-Searching through some files and directories requires elevated permission. Where you see: "Unhandled rejection Error: EACCES: permission denied", you can use `sudo`.
+Searching through some files and directories requires elevated permission. Where you see: 'Unhandled rejection Error: EACCES: permission denied', you can use `sudo`.
 
 ```shell
-sudo findy "**/*.md"
+sudo findy '**/*.md'
 ```
 
 ### Current Dir
@@ -42,7 +46,7 @@ sudo findy "**/*.md"
 Find any `README.md` file in the current directory. Note: Findy will still search recursively, but will only show results that match the current directory.
 
 ```shell
-findy "README.md"
+findy 'README.md'
 ```
 
 ### Containing word
@@ -50,7 +54,7 @@ findy "README.md"
 To find any `.txt` file containing the the word `notes`:
 
 ```shell
-findy "**/*notes*.txt"
+findy '**/*notes*.txt'
 ```
 
 ### Starting with word
@@ -58,7 +62,7 @@ findy "**/*notes*.txt"
 To find any file starting with the the word `notes`:
 
 ```shell
-findy "**/notes*.*"
+findy '**/notes*.*'
 ```
 
 ### Ending with word
@@ -66,9 +70,5 @@ findy "**/notes*.*"
 To find any file ending with the the word `notes`:
 
 ```shell
-findy "**/*notes.*"
+findy '**/*notes.*'
 ```
-
-## Tests
-
-`yarn install `
