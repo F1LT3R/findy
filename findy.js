@@ -61,10 +61,7 @@ const recursiveRead = dir => new Promise((resolve, reject) => {
 				resolve(stat)
 			})
 		} catch (err) {
-			resolve({
-				// mtime: 0,
-				// file: ''
-			})
+			resolve({})
 		}
 	})
 
@@ -86,7 +83,7 @@ const recursiveRead = dir => new Promise((resolve, reject) => {
 				if (stat.isFile()) {
 					if (matchingFilePattern(filepath)) {
 						fileList.push({
-							filepath: filepath,
+							filepath,
 							mtimeMs: stat.mtimeMs,
 							mtime: stat.mtime
 						})
