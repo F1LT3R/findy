@@ -1,0 +1,19 @@
+{
+  "name": "findy",
+  "version": "1.0.0",
+  "description": "Find files really easily.",
+  "main": "index.js",
+  "bin": {
+    "findy": "index.js"
+  },
+  "repository": "git@github.com:f1lt3r/findy.git",
+  "author": "f1lt3r",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chalk": "^1.1.3",
+    "micromatch": "^3.0.3",
+    "moment": "^2.18.1",
+    "xo": "^0.18.2"
+  }
+}
