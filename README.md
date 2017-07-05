@@ -14,7 +14,7 @@ _To find lost files by contents, use [ack](https://beyondgrep.com/)_
 - Ignores `node_modules` and `.git` directories
 - Lists files in reverse modified order (newest at bottom)
 - Friendly formmated date-time
-- Clickable CLI links (iTerm2)
+- Clickable relative CLI links (iTerm2)
 - Minimatch filepath pattern matching
 
 ## Installation
@@ -27,7 +27,7 @@ yarn install findy -g
 
 ### Find All Local
 
-Find all files in the current directory containing the word `yarn` anywhere in the name.
+Find all files in the current directory containing the word `yarn` anywhere in the name:
 
 ```shell
 findy *yarn*
@@ -35,7 +35,7 @@ findy *yarn*
 
 ### Find By Extension
 
-Find all `.env` and `.log` files in the current directory.
+Find all `.env` and `.log` files in the current directory:
 
 ```shell
 findy *.env *.log
@@ -43,7 +43,7 @@ findy *.env *.log
 
 ### Find Recursive
 
-Find all `.env` files recursively.
+Find all `.env` files recursively:
 
 ```shell
 findy **/*.env
@@ -51,17 +51,19 @@ findy **/*.env
 
 ### Negation
 
-Find all Markdown files recursively, that are **not** named `README.md`.
-
 **Important:** negation requires the use of single-quotes around the search phrase, unless used in an array (see: negative in array).
+
+Find all Markdown files recursively, that are **not** named `README.md`:
 
 ```shell
 findy **/*.md '!**/README.md'
 ```
 
-### File permissions
+### Searching with Sudo
 
-Searching through some files and directories requires elevated permission. Where you see: 'Unhandled rejection Error: EACCES: permission denied', you can use `sudo`.
+Searching through some files and directories may require elevated permission. Where you see: 'Unhandled rejection Error: EACCES: permission denied', you can use `sudo`.
+
+Seach for files with elevated permission:
 
 ```shell
 sudo findy **/*.md
@@ -69,7 +71,9 @@ sudo findy **/*.md
 
 ### Current Dir
 
-Find any `README.md` file in the current directory. Note: Findy will still search recursively, but will only show results that match the current directory.
+**Important:** Findy will still search recursively, but will only show results that match the current directory.
+
+Find any `README.md` file in the current directory:
 
 ```shell
 findy README.md
@@ -109,7 +113,7 @@ findy **/*{notes,tasks}*.md
 
 ## Negative In Array
 
-To find a anything in the current directory, with `foo` but **not** `bar`
+To find a anything in the current directory, with `foo` but **not** `bar`:
 
 ```shell
 findy *{foo,!bar}*
