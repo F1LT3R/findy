@@ -72,3 +72,13 @@ To find any file ending with the the word `notes`:
 ```shell
 findy '**/*notes.*'
 ```
+
+
+### Find This-or-That
+
+To find a Markdown file containing either `notes` or `tasks`:
+
+```shell
+findy '**/*{notes,tasks}*.md'
+```
+
