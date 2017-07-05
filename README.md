@@ -53,7 +53,7 @@ findy **/*.env
 
 Find all Markdown files recursively, that are **not** named `README.md`.
 
-**Important: ** negation requires the use of single-quotes around the search phrase, unless used in an array (see: negative in array).
+**Important:** negation requires the use of single-quotes around the search phrase, unless used in an array (see: negative in array).
 
 ```shell
 findy **/*.md '!**/README.md'
