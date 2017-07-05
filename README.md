@@ -25,12 +25,38 @@ yarn install findy -g
 
 ## Search Examples
 
-### Negation
+### Find All Local
 
-Find all Markdown files recursively, that are **not** named `README.md`
+Find all files in the current directory containing the word `yarn` anywhere in the name.
 
 ```shell
-findy '**/*.md' '!**/README.md'
+findy *yarn*
+```
+
+### Find By Extension
+
+Find all `.env` and `.log` files in the current directory.
+
+```shell
+findy *.env *.log
+```
+
+### Find Recursive
+
+Find all `.env` files recursively.
+
+```shell
+findy **/*.env
+```
+
+### Negation
+
+Find all Markdown files recursively, that are **not** named `README.md`.
+
+**Important: ** negation requires the use of single-quotes around the search phrase, unless used in an array (see: negative in array).
+
+```shell
+findy **/*.md '!**/README.md'
 ```
 
 ### File permissions
@@ -38,7 +64,7 @@ findy '**/*.md' '!**/README.md'
 Searching through some files and directories requires elevated permission. Where you see: 'Unhandled rejection Error: EACCES: permission denied', you can use `sudo`.
 
 ```shell
-sudo findy '**/*.md'
+sudo findy **/*.md
 ```
 
 ### Current Dir
@@ -46,39 +72,46 @@ sudo findy '**/*.md'
 Find any `README.md` file in the current directory. Note: Findy will still search recursively, but will only show results that match the current directory.
 
 ```shell
-findy 'README.md'
+findy README.md
 ```
 
-### Containing word
+### Containing Word Recursive
 
-To find any `.txt` file containing the the word `notes`:
+To recusively find any `.txt` file containing the the word `notes`:
 
 ```shell
-findy '**/*notes*.txt'
+findy **/*notes*.txt
 ```
 
 ### Starting with word
 
-To find any file starting with the the word `notes`:
+To recusrively find any file starting with the the word `notes`:
 
 ```shell
-findy '**/notes*.*'
+findy **/notes*
 ```
 
 ### Ending with word
 
-To find any file ending with the the word `notes`:
+To recusrively find any file ending with the the word `notes`:
 
 ```shell
-findy '**/*notes.*'
+findy **/*notes.*
 ```
-
 
 ### Find This-or-That
 
 To find a Markdown file containing either `notes` or `tasks`:
 
 ```shell
-findy '**/*{notes,tasks}*.md'
+findy **/*{notes,tasks}*.md
+```
+
+## Negative In Array
+
+To find a anything in the current directory, with `foo` but **not** `bar`
+
+```shell
+findy *{foo,!bar}*
 ```
 
