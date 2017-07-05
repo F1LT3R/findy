@@ -111,7 +111,7 @@ To find a Markdown file containing either `notes` or `tasks`:
 findy **/*{notes,tasks}*.md
 ```
 
-## Negative In Array
+### Negative In Array
 
 To find a anything in the current directory, with `foo` but **not** `bar`:
 
