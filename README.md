@@ -4,7 +4,7 @@ The handy little cli utility for finding lost files by name.
 
 _**Sidenote:** To find files by contents, forget grep, use [ack](https://beyondgrep.com/)_
 
-![[Findy Example Output](img/find-example-output.png)](img/find-example-output.png)
+![[Findy Example Output](img/findy-example-output.png)](img/findy-example-output.png)
 
 ### Features
 
