@@ -4,12 +4,12 @@ The handy little cli utility for finding lost files by name.
 
 ![[Findy Example Output](img/findy-example-output.png)](img/findy-example-output.png)
 
-- Find in subdirectories
-- Regex filepath pattern matching
-- Clickable file links from CLI
-- Files listed by modified date _(newest last)_
-- Auto-Ignore `node_modules` and `.git` dirs
-- Friendly formmated date-time
+- [x] Find in subdirectories
+- [x] Regex filepath pattern matching
+- [x] Clickable file links from CLI
+- [x] Files listed by modified date _(newest last)_
+- [x] Auto-Ignore `node_modules` and `.git` dirs
+- [x] Friendly date-time output
 
 See Findy in action: [Youtube](http://www.youtube.com/watch?v=bAXpDzsq32g)
 
