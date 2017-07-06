@@ -2,9 +2,12 @@
 
 The handy little cli utility for finding lost files by name.
 
+![[Findy Example Output](img/findy-example-output.png)](img/findy-example-output.png)
+
+See Findy in action: [Youtube](http://www.youtube.com/watch?v=bAXpDzsq32g)
+
 _**Sidenote:** To find files by contents, forget grep, use [ack](https://beyondgrep.com/)_
 
-![[Findy Example Output](img/findy-example-output.png)](img/findy-example-output.png)
 
 ### Features
 
