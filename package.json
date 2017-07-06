@@ -4,7 +4,7 @@
   "description": "Find files really easily.",
   "main": "findy.js",
   "scripts": {
-    "test": "xo; mocha *.spec.js"
+    "test": "echo \"xo; mocha *.spec.js\""
   },
   "bin": {
     "findy": "findy.js"
