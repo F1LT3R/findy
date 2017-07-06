@@ -5,7 +5,7 @@ The handy little cli utility for finding lost files by name.
 _**Sidenote:** To find files by contents, forget grep, use [ack](https://beyondgrep.com/)_
 
 ![[Find README Files](img/find-readme-files.png)](https://www.youtube.com/watch?v=bAXpDzsq32g)
-![[List Found Files](img/list-found-files.png)](https://www.youtube.com/watch?v=bAXpDzsq32g)
+![[List Found Files](https://www.youtube.com/watch?v=bAXpDzsq32)](img/list-found-files.png)
 
 
 ### Features
