@@ -1,12 +1,12 @@
 # Findy!
 
-Findy is the handy little cli utility for finding lost files by name.
+The handy little cli utility for finding lost files by name.
 
-_To find lost files by contents, use [ack](https://beyondgrep.com/)_
+_**Sidenote:** To find files by contents, forget grep, use [ack](https://beyondgrep.com/)_
 
-### Output
+![[Find README Files](img/find-readme-files.png)](https://www.youtube.com/watch?v=bAXpDzsq32g)
+![[List Found Files](img/list-found-files.png)](https://www.youtube.com/watch?v=bAXpDzsq32g)
 
-![[Example Output](output.png)](output.png)
 
 ### Features
 
@@ -15,7 +15,7 @@ _To find lost files by contents, use [ack](https://beyondgrep.com/)_
 - Lists files in reverse modified order (newest at bottom)
 - Friendly formmated date-time
 - Clickable relative CLI links (iTerm2)
-- Minimatch filepath pattern matching
+- Regex filepath pattern matching
 
 ## Installation
 
@@ -30,7 +30,7 @@ yarn install findy -g
 Find all files in the current directory containing the word `yarn` anywhere in the name:
 
 ```shell
-findy *yarn*
+findy '*yarn*'
 ```
 
 ### Find By Extension
@@ -38,7 +38,7 @@ findy *yarn*
 Find all `.env` and `.log` files in the current directory:
 
 ```shell
-findy *.env *.log
+findy '*.env' '*.log'
 ```
 
 ### Find Recursive
@@ -46,7 +46,7 @@ findy *.env *.log
 Find all `.env` files recursively:
 
 ```shell
-findy **/*.env
+findy '**/*.env'
 ```
 
 ### Negation
@@ -56,7 +56,7 @@ findy **/*.env
 Find all Markdown files recursively, that are **not** named `README.md`:
 
 ```shell
-findy **/*.md '!**/README.md'
+findy '**/*.md' '!**/README.md'
 ```
 
 ### Searching with Sudo
@@ -66,7 +66,7 @@ Searching through some files and directories may require elevated permission. Wh
 Seach for files with elevated permission:
 
 ```shell
-sudo findy **/*.md
+sudo findy '**/*.md'
 ```
 
 ### Current Dir
@@ -76,7 +76,7 @@ sudo findy **/*.md
 Find any `README.md` file in the current directory:
 
 ```shell
-findy README.md
+findy 'README.md'
 ```
 
 ### Containing Word Recursive
@@ -84,7 +84,7 @@ findy README.md
 To recusively find any `.txt` file containing the the word `notes`:
 
 ```shell
-findy **/*notes*.txt
+findy '**/*notes*.txt'
 ```
 
 ### Starting with word
@@ -92,7 +92,7 @@ findy **/*notes*.txt
 To recusrively find any file starting with the the word `notes`:
 
 ```shell
-findy **/notes*
+findy '**/notes*'
 ```
 
 ### Ending with word
@@ -100,7 +100,7 @@ findy **/notes*
 To recusrively find any file ending with the the word `notes`:
 
 ```shell
-findy **/*notes.*
+findy '**/*notes.*'
 ```
 
 ### Find This-or-That
@@ -108,7 +108,7 @@ findy **/*notes.*
 To find a Markdown file containing either `notes` or `tasks`:
 
 ```shell
-findy **/*{notes,tasks}*.md
+findy '**/*{notes,tasks}*.md'
 ```
 
 ### Negative In Array
@@ -116,6 +116,6 @@ findy **/*{notes,tasks}*.md
 To find a anything in the current directory, with `foo` but **not** `bar`:
 
 ```shell
-findy *{foo,!bar}*
+findy '*{foo,!bar}*'
 ```
 

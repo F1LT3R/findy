@@ -4,7 +4,7 @@
   "description": "Find files really easily.",
   "main": "findy.js",
   "scripts": {
-  	"test": "xo; mocha *.spec.js"
+    "test": "xo; mocha *.spec.js"
   },
   "bin": {
     "findy": "findy.js"
@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "cfonts": "^1.1.3",
     "chalk": "^1.1.3",
     "micromatch": "^3.0.3",
     "moment": "^2.18.1"
